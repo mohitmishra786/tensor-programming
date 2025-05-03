@@ -28,5 +28,5 @@ You’ll need some familiarity with C programming and basic linear algebra, but 
 ## Contact Information
 
 Got questions, feedback, or spotted an error in the book? Feel free to reach out! You can email me at:  
-[mohit@example.com](mailto:mohit@example.com)  
+[mohit@example.com](mailto:mohitmishra786687@gmail.com)  
 Or connect with me on [LinkedIn](http://linkedin.com/in/mohitmishraml/) or [X](https://x.com/chessMan786).
