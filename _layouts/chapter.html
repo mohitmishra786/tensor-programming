@@ -1,0 +1,41 @@
+---
+layout: default
+---
+<article class="chapter">
+  <header class="chapter-header">
+    <h1 class="chapter-title">Chapter {{ page.number }}: {{ page.title }}</h1>
+    <p class="chapter-description">{{ page.description }}</p>
+  </header>
+
+  <div class="chapter-content">
+    {{ content }}
+  </div>
+
+  <div class="chapter-navigation">
+    {% assign chapters = site.chapters | sort: "number" %}
+    {% for chapter in chapters %}
+      {% if chapter.number == page.number %}
+        {% assign chapter_index = forloop.index0 %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+
+    <div class="nav-links">
+      {% if chapter_index > 0 %}
+        {% assign prev_index = chapter_index | minus: 1 %}
+        {% assign prev_chapter = chapters[prev_index] %}
+        <a href="{{ prev_chapter.url | relative_url }}" class="prev-chapter">&laquo; Previous: {{ prev_chapter.title }}</a>
+      {% endif %}
+
+      {% if chapter_index < chapters.size | minus: 1 %}
+        {% assign next_index = chapter_index | plus: 1 %}
+        {% assign next_chapter = chapters[next_index] %}
+        <a href="{{ next_chapter.url | relative_url }}" class="next-chapter">Next: {{ next_chapter.title }} &raquo;</a>
+      {% endif %}
+    </div>
+    
+    <div class="toc-link">
+      <a href="{{ '/chapters' | relative_url }}">Table of Contents</a>
+    </div>
+  </div>
+</article> 

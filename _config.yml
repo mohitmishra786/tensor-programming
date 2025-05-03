@@ -1,0 +1,64 @@
+title: "Tensor Programming in C"
+description: "Building High-Performance Numerical Systems from Scratch"
+url: ""
+baseurl: "/tensor-programming"
+
+# Author Information
+author:
+  name: "Mohit Mishra"
+  email: "mohitmishra7@gmail.com"
+  github: "mohitmishra7"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  chapters:
+    output: true
+    permalink: /:collection/:name/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "chapters" 
+    values:
+      layout: "chapter"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Exclude from processing
+exclude:
+  - src/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git/
+  - .gitignore
+  - LICENSE
+  - scripts/
+  - README.md 

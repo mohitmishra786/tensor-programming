@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<div class="home">
+  <h1 class="page-heading">Tensor Programming in C</h1>
+  <h2 class="page-subheading">Building High-Performance Numerical Systems from Scratch</h2>
+
+  <div class="book-intro">
+    <p>A hands-on, practical guide to implementing tensor operations, optimizations, and real-world applications in C. This book series takes you from basic tensor structures to high-performance neural networks and embedded deployments.</p>
+    <p><a href="{{ '/chapters' | relative_url }}" class="start-reading">Start Reading &raquo;</a></p>
+  </div>
+
+  <div class="chapters-preview">
+    <h2>Chapters</h2>
+    <ul>
+      {% assign chapters = site.chapters | sort: "number" %}
+      {% for chapter in chapters %}
+        {% if chapter.number and forloop.index <= 5 %}
+        <li>
+          <h3>
+            <a href="{{ chapter.url | relative_url }}">
+              Chapter {{ chapter.number }}: {{ chapter.title }}
+            </a>
+          </h3>
+          <p>{{ chapter.description }}</p>
+        </li>
+        {% endif %}
+      {% endfor %}
+      {% if site.chapters.size > 5 %}
+        <li class="more-chapters">
+          <a href="{{ '/chapters' | relative_url }}">View all chapters...</a>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+
+  <div class="about-section">
+    <h2>About This Book Series</h2>
+    <p>I wrote this series after years of struggling with the gap between theoretical tensor mathematics and practical, high-performance C implementations. Too many resources either focus on abstract concepts without addressing real-world implementation challenges, or they provide code snippets that fall apart in production environments.</p>
+    <p>This book series is different. It's the guide I wish I had when I started building tensor systems for embedded devices and HPC clusters. Each chapter tackles concrete problems you'll face when implementing tensor operations in C, with complete code examples that prioritize:</p>
+    <ul>
+      <li><strong>Hands-on learning</strong>: Every concept is accompanied by working C code you can compile and run</li>
+      <li><strong>Performance optimization</strong>: Techniques for squeezing maximum performance from your hardware</li>
+      <li><strong>Memory management</strong>: Proper allocation, tracking, and freeing of resources</li>
+      <li><strong>Debugging strategies</strong>: Real-world approaches to finding and fixing common bugs</li>
+      <li><strong>Production readiness</strong>: Code that's robust enough for industrial applications</li>
+    </ul>
+    <p><a href="{{ '/about' | relative_url }}" class="learn-more">Learn more about the author and this book series...</a></p>
+  </div>
+</div> 

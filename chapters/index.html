@@ -1,0 +1,30 @@
+---
+layout: default
+title: Chapters
+permalink: /chapters/
+---
+
+<div class="chapters-page">
+  <h1 class="page-heading">Chapters</h1>
+  
+  <div class="book-intro">
+    <p>This book presents a hands-on, practical guide to implementing tensor operations, optimizations, and real-world applications in C. Each chapter builds upon the previous one, taking you from basic tensor structures to high-performance neural networks and embedded deployments.</p>
+  </div>
+  
+  <ul class="chapters-list">
+    {% assign chapters = site.chapters | sort: "number" %}
+    {% for chapter in chapters %}
+      {% if chapter.number %}
+      <li class="chapter-item">
+        <h2>
+          <a href="{{ chapter.url | relative_url }}">
+            Chapter {{ chapter.number }}: {{ chapter.title }}
+          </a>
+        </h2>
+        <p class="chapter-description">{{ chapter.description }}</p>
+        <a href="{{ chapter.url | relative_url }}" class="read-chapter">Read Chapter &raquo;</a>
+      </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div> 

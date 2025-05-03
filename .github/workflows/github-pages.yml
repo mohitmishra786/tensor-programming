@@ -1,0 +1,69 @@
+name: Build and Deploy Jekyll Site
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Run build scripts
+        run: |
+          mkdir -p ./scripts
+          echo '#!/bin/bash' > ./scripts/build_jekyll.sh
+          echo 'echo "Running build script for Jekyll"' >> ./scripts/build_jekyll.sh
+          chmod +x ./scripts/build_jekyll.sh
+          ./scripts/build_jekyll.sh
+      
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
+      
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          # Don't use bundler-cache when Gemfile has changed
+          # bundler-cache: true 
+      
+      - name: Install dependencies
+        run: |
+          gem install bundler -v 2.3.26
+          bundle config set --local deployment 'false'
+          bundle install
+      
+      - name: Build with Jekyll
+        run: |
+          bundle exec jekyll build --baseurl "/tensor-programming"
+        env:
+          JEKYLL_ENV: production
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4 

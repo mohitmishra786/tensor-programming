@@ -1,0 +1,253 @@
+---
+---
+
+@import "minima";
+
+/* Custom styles */
+
+/* General styling */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header styling */
+.site-header {
+  border-bottom: 1px solid #e8e8e8;
+  padding: 15px 0;
+  margin-bottom: 30px;
+}
+
+.site-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.site-nav {
+  float: right;
+}
+
+.site-nav a {
+  margin-left: 20px;
+  color: #666;
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: #333;
+}
+
+/* Chapter styling */
+.chapter {
+  margin-bottom: 40px;
+}
+
+.chapter-header {
+  margin-bottom: 30px;
+}
+
+.chapter-title {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.chapter-description {
+  font-size: 18px;
+  color: #666;
+  font-style: italic;
+}
+
+.chapter-content h2 {
+  font-size: 26px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eaecef;
+}
+
+.chapter-content h3 {
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.chapter-content p {
+  margin-bottom: 20px;
+}
+
+.chapter-content ul,
+.chapter-content ol {
+  margin-bottom: 20px;
+  padding-left: 25px;
+}
+
+.chapter-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+/* Code styling */
+pre, code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 14px;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  background-color: #f8f8f8;
+}
+
+code {
+  padding: 2px 5px;
+}
+
+pre {
+  padding: 12px 15px;
+  overflow-x: auto;
+}
+
+pre > code {
+  border: 0;
+  padding: 0;
+}
+
+/* Chapter navigation */
+.chapter-navigation {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #e8e8e8;
+}
+
+.chapter-navigation .nav-links {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.chapter-navigation .toc-link {
+  text-align: center;
+}
+
+.chapter-navigation a {
+  text-decoration: none;
+  color: #0366d6;
+}
+
+.chapter-navigation a:hover {
+  text-decoration: underline;
+}
+
+/* Home page */
+.home .page-heading {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.home .page-subheading {
+  font-size: 24px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.home .book-intro {
+  margin-bottom: 40px;
+}
+
+.home .book-intro p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.home .chapters-list {
+  margin-bottom: 40px;
+}
+
+.home .chapters-list h3 {
+  margin-bottom: 5px;
+}
+
+/* Chapters page */
+.chapters-page .chapters-list {
+  list-style: none;
+  padding: 0;
+}
+
+.chapters-page .chapter-item {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.chapters-page .chapter-item:last-child {
+  border-bottom: none;
+}
+
+.chapters-page .chapter-item h2 {
+  margin-bottom: 10px;
+}
+
+.chapters-page .read-chapter {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Footer styling */
+.site-footer {
+  border-top: 1px solid #e8e8e8;
+  padding: 20px 0;
+  margin-top: 60px;
+  color: #666;
+  font-size: 14px;
+}
+
+.site-footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-footer a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .site-nav {
+    float: none;
+    margin-top: 10px;
+  }
+  
+  .site-nav a {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+  }
+  
+  .footer-right {
+    margin-top: 10px;
+  }
+  
+  .chapter-navigation .nav-links {
+    flex-direction: column;
+  }
+  
+  .chapter-navigation .next-chapter {
+    margin-top: 10px;
+  }
+} 

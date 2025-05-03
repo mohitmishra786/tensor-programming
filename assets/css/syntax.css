@@ -1,0 +1,102 @@
+/* Syntax highlighting styles */
+.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #24292e;
+  background-color: #f6f8fa;
+}
+.highlight .err {
+  color: #a61717;
+  background-color: transparent;
+}
+.highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
+  color: #6a737d;
+  font-style: italic;
+}
+.highlight .cp {
+  color: #0366d6;
+  font-weight: bold;
+}
+.highlight .nt {
+  color: #22863a;
+}
+.highlight .o, .highlight .ow {
+  color: #d73a49;
+}
+.highlight .p, .highlight .pi {
+  color: #24292e;
+}
+.highlight .gi {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+.highlight .gd {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
+.highlight .gh {
+  color: #005cc5;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #d73a49;
+}
+.highlight .kc {
+  color: #005cc5;
+}
+.highlight .kt {
+  color: #d73a49;
+}
+.highlight .kd {
+  color: #d73a49;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #032f62;
+}
+.highlight .sr {
+  color: #032f62;
+}
+.highlight .si {
+  color: #005cc5;
+}
+.highlight .se {
+  color: #032f62;
+}
+.highlight .nn {
+  color: #6f42c1;
+}
+.highlight .nc {
+  color: #6f42c1;
+  font-weight: bold;
+}
+.highlight .no {
+  color: #005cc5;
+}
+.highlight .na {
+  color: #6f42c1;
+}
+.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mb, .highlight .mx {
+  color: #005cc5;
+}
+.highlight .ss {
+  color: #032f62;
+}
+.highlight .c-header {
+  color: #d73a49;
+  font-weight: bold;
+}
+.highlight .c-typedef {
+  color: #d73a49;
+}
+.highlight .c-struct {
+  color: #d73a49;
+}
+.highlight .c-preprocessor {
+  color: #0366d6;
+  font-weight: bold;
+}
+/* Style for C source code blocks */
+.language-c .c-comment {
+  color: #6a737d;
+  font-style: italic;
+} 
