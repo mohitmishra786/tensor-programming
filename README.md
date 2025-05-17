@@ -4,7 +4,7 @@ A hands-on, practical guide to implementing tensor operations, optimizations, an
 
 ## GitHub Pages
 
-This repository is set up with GitHub Pages to provide an easy-to-read format for the book. You can access the book online at: https://YOUR_USERNAME.github.io/tensor-programming/
+You can access the book online at: https://mohitmishra786.github.io/tensor-programming/
 
 ## Chapters
 
@@ -53,16 +53,6 @@ This series is ideal for C programmers who need to implement high-performance nu
 Basic knowledge of C programming and linear algebra concepts is assumed, but each topic is explained from first principles with a focus on practical implementation.
 
 ---
-
-## Running the Jekyll Site Locally
-
-To run this site locally:
-
-1. Install Ruby and Bundler
-2. Clone this repository
-3. Run `bundle install --path vendor/bundle` to install dependencies
-4. Run `bundle exec jekyll serve` to start the local server
-5. Visit `http://localhost:4000/tensor-programming` in your browser
 
 ## Contributing
 
